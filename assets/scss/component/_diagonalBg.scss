@@ -1,0 +1,40 @@
+.c-bg {
+	height: 54.6rem;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	background-color: #F4F8F8;
+	bottom: 0;
+	@include mq(sm) {
+		height: 127.6rem;
+	}
+	&.--people {
+		@include mq(sm) {
+			height: 77.8rem;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-top: 17rem solid $cWhite;
+		border-left: 100vw solid transparent;
+		top: 0;
+		@include mq(sm) {
+			border-top: 4.5rem solid $cWhite;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-bottom: 17rem solid $cWhite;
+		border-right: 100vw solid transparent;
+		bottom: 0;
+		@include mq(sm) {
+			border-bottom: 4.5rem solid $cWhite;
+		}
+	}
+}

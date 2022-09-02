@@ -1,0 +1,17 @@
+/* ===============================================
+# 微調整用のクラスなどを定義するファイルです。唯一 !important の使用ができます。
+=============================================== */
+
+.u-for-md {
+	display: block;
+	@include mq(sm) {
+		display: none;
+	}
+}
+
+.u-for-sm {
+	display: none;
+	@include mq(sm) {
+		display: block;
+	}
+}

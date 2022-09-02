@@ -1,0 +1,18 @@
+@import './foundation/reset';
+@import './foundation/mixin';
+@import './foundation/variables';
+@import './foundation/utility';
+@import './foundation/base';
+
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/form';
+
+@import './project/index';
+@import './project/thanks';
+
+@import './component/btn';
+@import './component/title';
+@import './component/number';
+@import './component/diagonalBg';

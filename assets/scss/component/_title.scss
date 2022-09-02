@@ -1,0 +1,19 @@
+.c-section-title {
+	margin-bottom: 6rem;
+	letter-spacing: 0.03em;
+	text-align: center;
+	& .en {
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 1.2;
+		color: #AAAAAA;
+		margin-bottom: 1rem;
+		display: inline-block;
+	}
+	& .ja {
+		font-size: 3.4rem;
+		line-height: 1.44;
+		color: $cBlack;
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,123 @@
+.l-footer {
+	border-top: 1px solid $cGray;
+	&-container {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+		@include mq(sm) {
+			padding: 6rem 0;
+		}
+	}
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4rem;
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 2.5rem;
+		}
+	}
+	&__logo {
+		width: 33.1rem;
+		height: auto;
+		@include mq(sm) {
+			width: 27rem;
+			margin-bottom: 4rem;
+		}
+		&__link {
+			display: block;
+			transition: all 0.3s;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	&-links {
+		width: 49rem;
+		display: flex;
+		justify-content: space-between;
+		@include mq(md) {
+			width: 60rem;
+		}
+		@include mq(sm) {
+			flex-direction: column;
+			width: 100%;
+		}
+		&-item {
+			@include mq(sm) {
+				margin-bottom: 1.8rem;
+			}
+			&:first-child {
+				margin-bottom: 1.5rem;
+				@include mq(sm) {
+					margin-bottom: 1.8rem;
+				}
+			}
+			&__link {
+				font-size: 1.4rem;
+				line-height: 1.42;
+				letter-spacing: 0.03em;
+				font-weight: 400;
+				transition: all 0.3s;
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+	&-ex {
+		display: flex;
+		justify-content: flex-end;
+		@include mq(sm) {
+			flex-direction: column;
+		}
+		&-item {
+			&:first-child {
+				margin-right: 4.8rem;
+				@include mq(sm) {
+					margin-bottom: 1rem;
+				}
+			}
+			&__link {
+				position: relative;
+				font-size: 1.4rem;
+				font-weight: 400;
+				line-height: 1.42;
+				letter-spacing: 0.03em;
+				transition: all 0.3s;
+				color: #848484;
+				&:hover {
+					opacity: 0.7;
+				}
+				&__icon {
+					position: absolute;
+					width: 1.318rem;
+					height: auto;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&__txt {
+					padding-left: 2.2rem;
+				}
+			}
+		}
+	}
+	&-copyright {
+		height: 4.2rem;
+		text-align: right;
+		color: $cWhite;
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 4.2rem;
+		letter-spacing: 0.02em;
+		background-color: #00655A;
+		@include mq(sm) {
+			font-size: 1rem;
+			line-height: 4.4rem;
+			height: 4.4rem;
+			text-align: center;
+		}
+	}
+}
