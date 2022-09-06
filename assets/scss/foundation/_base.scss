@@ -32,7 +32,11 @@ em {
 	width: calc(1030/1280 * 100%);
 	margin: 0 auto;
 	max-width: 115rem;
+	@include mq(md) {
+		min-width: 100rem;
+	}
 	@include mq(sm) {
 		width: 33.5rem;
+		min-width: 33.5rem;
 	}
 }

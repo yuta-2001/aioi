@@ -190,6 +190,40 @@
 			}
 		}
 	}
+	/**
+	* モーダル
+	*/
+	&-modal {
+		position: fixed;
+		z-index: 101;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(37,37,37,0.86);
+		align-items: center;
+		justify-content: center;
+		&.is-open {
+			display: flex;
+		}
+		&.is-close {
+			display: none;
+		}
+		&__content {
+			width: 100rem;
+			margin: 0 auto;
+			padding: 0 2rem;
+			height: 58rem;
+			& iframe {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		}
+	}
 }
 
 .p-support {
@@ -295,37 +329,38 @@
 			align-items: center;
 		}
 	}
-	& li {
-		&:nth-child(2) {
+	&-item {
+		&:nth-of-type(2) {
 			margin-top: 5rem;
 			@include mq(sm) {
 				margin-top: 3.4rem;
 			}
 		}
-	}
-	&-item {
-		width: 47rem;
-		height: 39.7rem;
-		display: block;
-		border-radius: 1rem;
-		position: relative;
-		@include mq(sm) {
-			width: 100%;
-			height: 30.6rem;
-		}
-		&:hover {
-			& .p-people {
-				&-item {
-					&-top {
-						&::after {
-							background: rgba(72,191,183,0.2)
-						}
-						&__arrow {
-							background: linear-gradient(to top left, rgba(0,92,100,1), rgba(21,178,172,1));
-							&__content {
-								right: 3.13rem;
-								&::after {
-									width: 7rem;
+		&__link {
+			width: 47rem;
+			height: 39.7rem;
+			display: block;
+			border-radius: 1rem;
+			position: relative;
+			cursor: pointer;
+			@include mq(sm) {
+				width: 100%;
+				height: 30.6rem;
+			}
+			&:hover {
+				& .p-people {
+					&-item {
+						&-top {
+							&::after {
+								background: rgba(72,191,183,0.2)
+							}
+							&__arrow {
+								background: linear-gradient(to top left, rgba(0,92,100,1), rgba(21,178,172,1));
+								&__content {
+									right: 3.13rem;
+									&::after {
+										width: 7rem;
+									}
 								}
 							}
 						}
@@ -423,6 +458,305 @@
 		}
 		&__belong {
 			font-size: 1.4rem;
+		}
+	}
+	/**
+	* モーダル
+	*/
+	&-modal {
+		&-item {
+			padding-top: 14.5rem;
+			padding-bottom: 14.5rem;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(37,37,37,0.86);	
+			z-index: 101;
+			overflow-y: auto;
+			@include mq(sm) {
+				padding: 1rem 0;
+			}
+			&.is-open {
+				display: block;
+			}
+			&.is-close {
+				display: none;
+			}
+			&__btn {
+				display: none;
+				width: 4.4rem;
+				height: 4.4rem;
+				position: absolute;
+				top: 2rem;
+				right: 2rem;
+				border-radius: 50%;
+				border: 1px solid $cBlack;
+				cursor: pointer;
+				@include mq(sm) {
+					display: block;
+				}
+				&::before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 1px;
+					background-color: $cBlack;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%) rotate(45deg);
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 2rem;
+					height: 1px;
+					background-color: $cBlack;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%) rotate(-45deg);
+				}
+			}
+			&-container {
+				width: 99rem;
+				background-color: $cWhite;
+				border-radius: 1rem;
+				box-sizing: border-box;
+				padding: 6rem 8rem 8.4rem;
+				margin: 0 auto;
+				pointer-events: none;
+				position: relative;
+				@include mq(sm) {
+					padding: 9.5rem 2rem 8rem;
+					width: 33.5rem;
+				}
+			}
+			&-top {
+				margin-bottom: 12.6rem;
+				@include mq(sm) {
+					margin-bottom: 8.2rem;
+				}
+				&-profile {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 7.8rem;
+					@include mq(sm) {
+						margin-bottom: 6rem;
+						justify-content: center;
+						flex-direction: column;
+					}
+					&-left {
+						display: block;
+						width: 41.5rem;
+						height: auto;
+						position: relative;
+						@include mq(sm) {
+							width: 100%;
+							height: 20.4rem;
+							margin-bottom: 2rem;
+						}
+						&__txt {
+							position: absolute;
+							width: 34rem;
+							height: auto;
+							top: -4.7rem;
+							left: -5rem;
+							@include mq(sm) {
+								width: 23rem;
+								left: -1rem;
+								top: -3rem;
+							}
+							&.--goto {
+								width: 24.5rem;
+								top: -1.8rem;
+								@include mq(sm) {
+									width: 18rem;
+									left: -2rem;
+								}
+							}
+						}
+					}
+					&-right {
+						width: 36rem;
+						@include mq(sm) {
+							width: 100%;
+						}
+						&-top {
+							padding-bottom: 3rem;
+							margin-bottom: 3rem;
+							border-bottom: 1px solid $cGray;
+							@include mq(sm) {
+								padding-bottom: 2rem;
+								margin-bottom: 2rem;
+							}
+							&__profile {
+								font-size: 1.6rem;
+								line-height: 1.25;
+								letter-spacing: 0.03em;
+								font-weight: 400;
+								padding: 0.2rem 2rem;
+								background-color: #149A8C;
+								color: $cWhite;
+								display: inline-block;
+								margin-bottom: 3rem;
+								@include mq(sm) {
+									font-size: 1.4rem;
+									height: 1.8rem;
+									line-height: 1.8rem;
+									padding: 0 1rem;
+									margin-bottom: 2rem;
+								}
+							}
+							&__name {
+								margin-bottom: 2rem;
+								@include mq(sm) {
+									margin-bottom: 1rem;
+								}
+								&__ja {
+									font-size: 3.2rem;
+									font-weight: 500;
+									letter-spacing: 0.03em;
+									line-height: 1.43;
+									margin-right: 3rem;
+									@include mq(sm) {
+										font-size: 2.6rem;
+										line-height: 1.42;
+										margin-right: 2.4rem;
+									}
+								}
+								&__en {
+									font-size: 2rem;
+									letter-spacing: 0.03em;
+									line-height: 1.2;
+									font-weight: 400;
+									color: #AAAAAA;
+									@include mq(sm) {
+										font-size: 1.8rem;
+									}
+								}
+							}
+							&__belong {
+								font-size: 1.6rem;
+								letter-spacing: 0.03em;
+								font-weight: 400;
+								@include mq(sm) {
+									font-size: 1.4rem;
+								}
+							}
+						}
+						&-bottom {
+							&__txt {
+								font-size: 1.4rem;
+								letter-spacing: 0.03em;
+								line-height: 2.14;
+								font-family: 'Noto Sans JP', sans-serif;
+							}
+						}
+					}
+				}
+				&__title {
+					font-size: 2.2rem;
+					font-weight: 500;
+					font-family: 'Noto Sans JP', sans-serif;
+					line-height: 1.72;
+					margin-bottom: 4rem;
+					@include mq(sm) {
+						font-size: 1.8rem;
+						line-height: 1.55;
+						margin-bottom: 2rem;
+					}
+				}
+				&__txt {
+					font-family: 'Noto Sans JP', sans-serif;
+					font-size: 1.6rem;
+					letter-spacing: 0.03em;
+					line-height: 2;
+					font-weight: 400;
+					@include mq(sm) {
+						font-size: 1.4rem;
+						line-height: 1.71;
+					}
+				}
+			}
+			&-bottom {
+				display: flex;
+				justify-content: space-between;
+				@include mq(sm) {
+					flex-direction: column;
+				}
+				&__left {
+					width: 31rem;
+					height: 20rem;
+					position: relative;
+					@include mq(sm) {
+						width: 100%;
+						height: 19.6rem;
+						margin-bottom: 7rem;
+					}
+					&__txt {
+						position: absolute;
+						width: 25rem;
+						height: auto;
+						left: -5rem;
+						top: -4.6rem;
+						@include mq(sm) {
+							width: 20rem;
+							top: -2.5rem;
+							left: -1.4rem;
+						}
+						&.--goto {
+							width: 38.5rem;
+							top: -6.8rem;
+							@include mq(sm) {
+								width: 32rem;
+								top: -5.7rem;
+							}
+						}
+					}
+					&__desc {
+						display: inline-block;
+						font-size: 1.4rem;
+						font-weight: 400;
+						letter-spacing: 0.03em;
+						position: absolute;
+						right: 0;
+						bottom: -2rem;
+					}
+				}
+				&__right {
+					width: 46rem;
+					@include mq(sm) {
+						width: 100%;
+					}
+					&__title {
+						font-size: 2.2rem;
+						font-weight: 500;
+						font-family: 'Noto Sans JP', sans-serif;
+						line-height: 1.72;
+						margin-bottom: 4rem;
+						@include mq(sm) {
+							font-size: 1.8rem;
+							line-height: 1.55;
+							margin-bottom: 2rem;
+						}
+					}
+					&__txt {
+						font-family: 'Noto Sans JP', sans-serif;
+						font-size: 1.6rem;
+						letter-spacing: 0.03em;
+						line-height: 2;
+						font-weight: 400;
+						@include mq(sm) {
+							font-size: 1.4rem;
+							line-height: 1.71;
+						}
+					}
+				}
+			}
 		}
 	}
 }

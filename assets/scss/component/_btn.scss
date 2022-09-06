@@ -14,6 +14,21 @@
 		letter-spacing: 0.03em;
 		line-height: 5.6rem;
 		padding-left: 6rem;
+		font-weight: 500;
+		@include mq(md) {
+			width: 56rem;
+			height: 12rem;
+			line-height: 12rem;
+			font-size: 3.8rem;
+			padding-left: 17rem;
+		}
+		@include mq(sm) {
+			width: 28.7rem;
+			height: 6.4rem;
+			font-size: 1.6rem;
+			line-height: 6.4rem;
+			padding-left: 9.5rem;
+		}
 	}
 	&.--hear {
 		width: 35.6rem;
@@ -39,6 +54,16 @@
 		top: 50%;
 		left: 1rem;
 		transform: translateY(-50%);
+		@include mq(md) {
+			width: 7rem;
+			height: 7rem;
+			left: 3rem;
+		}
+		@include mq(sm) {
+			width: 4rem;
+			height: 4rem;
+			left: 2rem;
+		}
 	}
 	& .triangle {
 		display: block;

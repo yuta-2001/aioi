@@ -77,7 +77,65 @@
 						<span>お問い合わせ</span>
 					</a>
 				</nav>
+				<button class="l-header-hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
+			<nav class="l-header-modal" id="navigation">
+				<div class="l-header-modal-container">
+					<ul class="l-header-modal-list">
+						<li class="l-header-modal-list-item">
+							<a href="" class="l-header-modal-list-item__link">
+								保険業界について
+							</a>
+						</li>
+						<li class="l-header-modal-list-item">
+							<a href="" class="l-header-modal-list-item__link">
+								保険コンサルタントとは
+							</a>
+						</li>
+						<li class="l-header-modal-list-item">
+							<a href="" class="l-header-modal-list-item__link">
+								独立支援制度
+							</a>
+						</li>
+						<li class="l-header-modal-list-item">
+							<a href="" class="l-header-modal-list-item__link">
+								働く人
+							</a>
+						</li>
+						<li class="l-header-modal-list-item">
+							<a href="" class="l-header-modal-list-item__link">
+								よくある質問
+							</a>
+						</li>
+					</ul>
+					<a class="c-btn --contact" href="">
+						<img class="mail-icon" src="./assets/images/mailIcon.svg" alt="">
+						<span>お問い合わせ</span>
+					</a>
+					<ul class="l-header-modal-ex">
+						<li class="l-header-modal-ex-item">
+							<a class="l-header-modal-ex-item__link" href="https://www.aioinissaydowa.co.jp/" target="_blank" rel="noopener noreferrer">
+								<img class="l-header-modal-ex-item__link__icon" src="./assets/images/exLink.png" alt="">
+								<span class="l-header-modal-ex-item__link__txt">
+									あいおいニッセイ同和損保
+								</span>
+							</a>
+						</li>
+						<li class="l-header-modal-ex-item">
+							<a class="l-header-modal-ex-item__link" href="https://www.aioinissaydowa.co.jp/corporate/policy/privacy.html" target="_blank" rel="noopener noreferrer">
+								<img class="l-header-modal-ex-item__link__icon" src="./assets/images/exLink.png" alt="">
+								<span class="l-header-modal-ex-item__link__txt">
+									個人情報保護方針
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</header>
 
 		<!-- main -->
@@ -173,7 +231,7 @@
 				</div>
 			</section>
 			<section class="p-consultant">
-				<div class="p-consultant-container">
+				<div class="p-consultant-container container">
 					<h2 class="c-section-title">
 						<span class="en">
 							Insurance consultant
@@ -182,10 +240,18 @@
 							保険コンサルタントとは
 						</span>
 					</h2>
-					<a class="p-consultant-video">
+					<a class="p-consultant-video js-modal-open" data-target="modal01">
 						<img class="" src="./assets/images/video.png" alt="">
 					</a>
-					<!-- <iframe class="js-youtube" data-youtube="https://player.vimeo.com/video/475738270" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/475738270"></iframe> -->
+					<!-- モーダル -->
+					<div class="p-consultant-modal js-modal is-close js-modal-close" id="modal01">
+						<button class="c-modal-btn">
+						</button>
+						<div class="p-consultant-modal__content">
+							<iframe class="js-youtube" data-youtube="https://player.vimeo.com/video/475738270" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/475738270"></iframe>
+						</div>
+					</div>
+					<!-- モーダル終了 -->
 				</div>
 			</section>
 			<section class="p-support">
@@ -234,8 +300,8 @@
 						</span>
 					</h2>
 					<ul class="p-people-list">
-						<li>
-							<a class="p-people-item" href="">
+						<li class="p-people-item">
+							<a class="p-people-item__link js-modal-open" data-target="modal02">
 								<span class="c-number">
 									01
 								</span>
@@ -264,8 +330,8 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<a class="p-people-item" href="">
+						<li class="p-people-item">
+							<a class="p-people-item__link js-modal-open" data-target="modal03">
 								<span class="c-number">
 									02
 								</span>
@@ -293,6 +359,137 @@
 									</div>
 								</div>
 							</a>
+						</li>
+					</ul>
+					<ul class="p-people-modal">
+						<li class="p-people-modal-item js-modal js-modal-close is-close" id="modal02">
+							<button class="c-modal-btn --people">
+							</button>
+							<div class="p-people-modal-item-container">
+								<button class="p-people-modal-item__btn js-modal-close">
+								</button>
+								<div class="p-people-modal-item-top">
+									<div class="p-people-modal-item-top-profile">
+										<picture class="p-people-modal-item-top-profile-left">
+											<img class="p-people-modal-item-top-profile-left__txt" src="./assets/images/modalHiranoTopTxt.png" alt="">
+											<img src="./assets/images/modalHiranoTop.png" alt="">
+										</picture>
+										<div class="p-people-modal-item-top-profile-right">
+											<div class="p-people-modal-item-top-profile-right-top">
+												<span class="p-people-modal-item-top-profile-right-top__profile">Profile</span>
+												<h2 class="p-people-modal-item-top-profile-right-top__name">
+													<span class="p-people-modal-item-top-profile-right-top__name__ja">平野 毅</span>
+													<span class="p-people-modal-item-top-profile-right-top__name__en">Takeshi Hirano</span>
+												</h2>
+												<p class="p-people-modal-item-top-profile-right-top__belong">
+													東京中央支店 営業開発課　(取材当時)
+												</p>
+											</div>
+											<div class="p-people-modal-item-top-profile-right-bottom">
+												<p class="p-people-modal-item-top-profile-right-bottom__txt">
+													生命保険代理店の営業職を経て、2015年6月に入社。<br class="u-for-md">
+													独立を目標に、常にお客さまの成長にプラスになるような 保険サービスの提案を心掛けている。
+												</p>
+											</div>
+										</div>
+									</div>
+									<h3 class="p-people-modal-item-top__title">
+										変化の激しい時代だからこそ<br>
+										お客さまをあらゆるリスクから守る取り組みを
+									</h3>
+									<p class="p-people-modal-item-top__txt">
+										私は生命保険の代理店へ就職したのをきっかけに、保険業界に携わるようになりました。当時は先輩と一緒にお客さまの対応をすることが多かったのですが、先輩がお客さまととても良好な関係を築いていて「私もこんな関係性を作っていきたい」「そのためには損害保険や法律・税務を改めて勉強することが必要」と感じるようになりました。また独立する先輩も多く、「自分もいずれはお客さまにあらゆる提案のできる代理店を経営したい」と考え、転職を決意しました。<br>
+										<br>
+										転職をする上で選択肢はいくつかありましたが、一番の決め手となったのは「人」でした。前職時代に付き合いのあったあいおいニッセイ同和損保の営業社員の方が、仕事面はもちろん、人間的にもとても尊敬でき、ぜひその方と一緒に仕事をしたいと思ったのが入社の大きな理由です。<br>
+										<br>
+										「保険コンサルタント」の役割は、保険サービスでリスクをカバーすることによって、お客さまが何かにチャレンジするきっかけを作ることだと思っています。実際に、課題を抱えているお客さまに対して、成長にプラスになるような保険サービスを提供できたときはやりがいを感じます。お客さまから「保険があるからチャレンジできた」「保険があるから安心できた」という言葉を掛けていただけると、保険で守れるものがあるのだと誇りを持てます。激しく環境が変化するこの時代に、お客さまをすべてのリスクから守ることは難しいかもしれません。でも、ほかの業種の方、専門家の方とも密に連携し、協力しながら、お客さまをあらゆるリスクから守っていけるよう、これからも取り組んでいきたいと思います。
+									</p>
+								</div>
+								<div class="p-people-modal-item-bottom">
+									<div class="p-people-modal-item-bottom__left">
+										<img class="p-people-modal-item-bottom__left__txt" src="./assets/images/modalHiranoBottomTxt.png" alt="">
+										<img src="./assets/images/modalHiranoBottom.png" alt="">
+										<span class="p-people-modal-item-bottom__left__desc">
+											平野社員の奥さま
+										</span>
+									</div>
+									<div class="p-people-modal-item-bottom__right">
+										<h3 class="p-people-modal-item-bottom__right__title">
+											不安を解消したのは、<br class="u-for-md">
+										「夫を応援したい」という想いでした。
+										</h3>
+										<p class="p-people-modal-item-bottom__right__txt">
+											私自身も転職経験があったので、夫から転職の話を聞いたときにネガティブな印象は持ちませんでした。しかし、収入への不安と、果たして在籍基準を達成し5年間働けるのだろうか、という漠然とした不安は感じました。ただ、転勤がないことは家族として安心ですし、何より本人の希望をかなえてあげたいという思いが強かったです。前職で営業をしていたときも楽しそうに働いていましたし、転職で営業職としてさらに上を目指せるなら、全面的にサポートしたいと思いました。転職後は、本人のペースで仕事配分ができるようになり、自由に使える時間も増えました。それで子育てに積極的に参加してくれるようになったのは、家族としてうれしいことで、本人も無理なく働けているのだと感じています。<br>
+											<br>
+											今後独立した際には、モチベーションや目標の置き方を自分自身で組み立てる必要があります。大変だと思いますが、コンサルティング営業として学んだ経験を活かし、これからも社会における重要な役割を担っていってほしいです。
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="p-people-modal-item js-modal js-modal-close is-close" id="modal03">
+							<button class="c-modal-btn">
+							</button>
+							<div class="p-people-modal-item-container">
+								<button class="p-people-modal-item__btn js-modal-close">
+								</button>
+								<div class="p-people-modal-item-top">
+									<div class="p-people-modal-item-top-profile">
+										<picture class="p-people-modal-item-top-profile-left">
+											<img class="p-people-modal-item-top-profile-left__txt --goto" src="./assets/images/modalGotoTopTxt.png" alt="">
+											<img src="./assets/images/modalGotoTop.png" alt="">
+										</picture>
+										<div class="p-people-modal-item-top-profile-right">
+											<div class="p-people-modal-item-top-profile-right-top">
+												<span class="p-people-modal-item-top-profile-right-top__profile">Profile</span>
+												<h2 class="p-people-modal-item-top-profile-right-top__name">
+													<span class="p-people-modal-item-top-profile-right-top__name__ja">後藤 真結</span>
+													<span class="p-people-modal-item-top-profile-right-top__name__en">Mayu Goto</span>
+												</h2>
+												<p class="p-people-modal-item-top-profile-right-top__belong">
+													金沢支店 金沢第一支社　(取材当時)
+												</p>
+											</div>
+											<div class="p-people-modal-item-top-profile-right-bottom">
+												<p class="p-people-modal-item-top-profile-right-bottom__txt">
+													営業未経験ながら保険業界へ転身。代理店から、あいおいニッセイ同和損保へ出向して、提携する自動車販売店顧客への自動車保険、火災保険の提案に励んでいる。
+												</p>
+											</div>
+										</div>
+									</div>
+									<h3 class="p-people-modal-item-top__title">
+										保険料以上に価値のある「安心」を届ける<br>
+										それが私の使命です
+									</h3>
+									<p class="p-people-modal-item-top__txt">
+										前職ではバトントワリングのインストラクターという、保険とは全くかけ離れた仕事をしていました。地元に戻って働ける仕事を探していたところ、父の保険を担当している代理店を紹介され、この業界に入りました。現在は代理店からの出向者として、保険商品や営業手法を学んでいます。入社直後は初めてのことばかりで難しいと感じることが多かったですね。本当に人前で保険の提案ができるか不安でしたが、トレーニングセンターで商品学習とロープレを繰り返すうちに、お客さまから「分かりやすい説明だった」と言ってもらえるまでになりました。<br>
+										<br>
+										私は自動車保険を扱うことが多いのですが、万一事故が起きてしまった際に「この保険に入っていてよかった」と言っていただいた際には、きちんとした補償内容の保険を提案できてよかった、保険で守れるものがあるのだ、と強く感じます。現在は、比較的安価なネット型保険に加入しているお客さまも多く、切り替えの提案は大変ですが、テレマティクス自動車保険や24時間365日事故対応など先進性と充実したサービスを訴求して、保険料だけではなく補償内容に興味を持ってもらえるようにしています。<br>
+										<br>
+										今後は自動車保険でお付き合いの始まったお客さまに対して、火災保険を主とした自然災害への備え提案を進めていきます。出向期間はもうすぐ終わりますが、研修で学んだことを活かして、代理店でさらに活躍していきたいと思います。
+									</p>
+								</div>
+								<div class="p-people-modal-item-bottom">
+									<div class="p-people-modal-item-bottom__left">
+										<img class="p-people-modal-item-bottom__left__txt --goto" src="./assets/images/modalGotoBottomTxt.png" alt="">
+										<img src="./assets/images/modalGotoBottom.png" alt="">
+										<span class="p-people-modal-item-bottom__left__desc">
+											提携する自動車販売会社社長
+										</span>
+									</div>
+									<div class="p-people-modal-item-bottom__right">
+										<h3 class="p-people-modal-item-bottom__right__title">
+											いつも明るく誠実に<br>
+											お客さまに接してもらっています。
+										</h3>
+										<p class="p-people-modal-item-bottom__right__txt">
+											ご来店されるお客さま一人ひとり丁寧に挨拶し、しっかりと保険証券診断、加入提案をしてもらっているので、私どもも安心して彼女に任せることができます。また、当社のスタッフにも気さくに声を掛けたり、自ら無料相談をアピールする店舗装飾を作成する姿は、とても前向きで感心させられます。<br>
+											<br>
+											おかげさまで後藤さんに担当していただいて以降、保険の取り扱いも多くなりました。お客さまの評価も高く、わずかなことでも連絡を欠かさず進めてくれるので、これからも後藤さんと一緒に保険募集をしていく予定です。
+										</p>
+									</div>
+								</div>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -521,5 +718,6 @@
 
 	<!-- script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="module" src="./assets/js/main.js"></script>
 
 </html>
