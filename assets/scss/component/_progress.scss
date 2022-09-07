@@ -1,0 +1,10 @@
+.c-progress {
+	display: block;
+	width: 31.7rem;
+	height: auto;
+	margin: 0 auto 6rem;
+	@include mq(sm) {
+		width: 21.1rem;
+		margin: 0 auto 3.4rem;
+	}
+}

@@ -1,13 +1,30 @@
 .l-header {
 	border-bottom: 1px solid $cGray;
+	background-color: $cWhite;
+	z-index: 100;
+	&.--other-page {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+	&.--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		transform: translateY(-120%);
+		transition: all 0.3s ease;
+		&.is-in {
+			transform: none;
+		}
+	}
 	@include mq(md) {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		width: 100%;
-		background-color: $cWhite;
-		z-index: 100;
 	}
 	&-container {
 		width: calc(1240/1280 * 100%);

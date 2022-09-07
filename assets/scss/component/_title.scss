@@ -2,6 +2,9 @@
 	margin-bottom: 6rem;
 	letter-spacing: 0.03em;
 	text-align: center;
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
 	& .en {
 		font-size: 2rem;
 		font-weight: 400;
@@ -9,11 +12,18 @@
 		color: #AAAAAA;
 		margin-bottom: 1rem;
 		display: inline-block;
+		@include mq(sm) {
+			font-size: 1.8rem;
+			margin-bottom: 0.6rem;
+		}
 	}
 	& .ja {
 		font-size: 3.4rem;
 		line-height: 1.44;
 		color: $cBlack;
 		font-weight: 500;
+		@include mq(sm) {
+			font-size: 2.6rem;
+		}
 	}
 }

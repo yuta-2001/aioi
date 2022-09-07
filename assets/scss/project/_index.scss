@@ -22,15 +22,38 @@
 			margin-bottom: 4.5vh;
 			margin-top: 0;
 		}
-		&__em {
-			font-size: 6rem;
-			line-height: 1.66;
-			letter-spacing: 0.06em;
-			font-weight: bold;
-			@include mq(sm) {
-				font-size: 4rem;
-				line-height: 5.8rem;
-				letter-spacing: 0.08em;
+		& .char {
+			overflow: hidden;
+			display: inline-block;
+			@for $i from 1 to 14 {
+				&:nth-of-type(#{$i}) {
+					font-size: 6rem;
+					line-height: 1.66;
+					letter-spacing: 0.06em;
+					font-weight: bold;
+					@include mq(sm) {
+						font-size: 4rem;
+						line-height: 5.8rem;
+						letter-spacing: 0.08em;
+					}
+				}
+			}
+			@for $i from 1 to 33 {
+				&:nth-of-type(#{$i}) {
+					& span {
+						display: inline-block;
+						transition: 0.5s cubic-bezier(0.18, 0.89, 0.54, 1.03) 0.39s;
+						transition-delay: calc(0.02s * #{$i});
+						transform: translateY(110%);
+					}
+				}
+			}
+		}
+		&.is-animate {
+			& .char {
+				& span {
+					transform: none;
+				}
 			}
 		}
 	}
@@ -57,8 +80,45 @@
 		}
 		&-right {
 			width: calc(780/1280 * 100%);
+			overflow: hidden;
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			position: relative;
 			@include mq(sm) {
 				width: 100%;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $cWhite;
+				z-index: 2;
+				transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+			&.is-animate {
+				&::after {
+					width: 0;
+				}
+				& .p-mv-bottom-right__content {
+					transform: none;
+				}
+			}
+			&__content {
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+				transform: scale(1.4);
+				transition-delay: 2s;
+				transition: all 0.4s ease;
+				@include mq(sm) {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
 			}
 		}
 	}
@@ -250,8 +310,54 @@
 		border-radius: 1rem;
 		box-sizing: border-box;
 		box-shadow: 0px 0px 20px rgba(128,128,128,0.16);
+		position: relative;
 		@include mq(sm) {
 			padding: 6rem 2rem;
+		}
+	}
+	&__lines {
+		&.--long {
+			width: 0;
+			height: 1px;
+			background-color: #93DFC1;
+			position: absolute;
+			top: -3.8rem;
+			left: -6rem;
+			transform-origin: top left;
+			transform: rotate(38deg);
+			transition: all 0.5s ease;
+			@include mq(sm) {
+				top: -1.1rem;
+				left: -1.5rem;
+				transform: rotate();
+			}
+			&.is-animate {
+				width: 15rem;
+				@include mq(sm) {
+					width: 10.5rem;
+				}
+			}
+		}
+		&.--short {
+			width: 0;
+			height: 1px;
+			background-color: #93DFC1;
+			position: absolute;
+			top: -3rem;
+			left: -3rem;
+			transform-origin: top left;
+			transform: rotate(38deg);
+			transition: all 0.5s ease;
+			@include mq(sm) {
+				top: -0.4rem;
+				left: 0.6rem;
+			}
+			&.is-animate {
+				width: 10rem;
+				@include mq(sm) {
+					width: 6.8rem;
+				}
+			}
 		}
 	}
 	&-middle {
@@ -834,6 +940,9 @@
 	}
 	&-item {
 		border-bottom: 1px solid $cGray;
+		&.is-open {
+			background-color: #F7F7F7;
+		}
 		&__head {
 			position: relative;
 			box-sizing: border-box;
@@ -842,6 +951,11 @@
 			height: 8.8rem;
 			display: flex;
 			align-items: center;
+			transition: all 0.2s;
+			cursor: pointer;
+			&:hover {
+				opacity: 0.7;
+			}
 			@include mq(sm) {
 				padding-left: 6.2rem;
 				padding-right: 4rem;
@@ -882,54 +996,56 @@
 				}
 				&::before {
 					position: absolute;
+					top: 50%;
+					left: 50%;
 					width: 2rem;
 					height: 1px;
 					background-color: $cBlack;
 					content: '';
 					display: block;
+					transform: translate(-50%, -50%);
+					transition: all 0.2s ease;
 				}
 				&::after {
 					position: absolute;
+					top: 50%;
+					left: 50%;
 					width: 2rem;
 					height: 1px;
 					background-color: $cBlack;
 					content: '';
 					display: block;
-					transform: rotate(90deg);
+					transform: translate(-50%,-50%) rotate(90deg);
+					transition: all 0.2s ease;
 				}
+				// オープン時
+				&.is-open {
+					&::before {
+						transform: translate(-50%,-50%) rotate(150deg);
+					}
+					&::after {
+						transform: translate(-50%,-50%) rotate(210deg);
+					}
+				}
+			}
+		}
+		&__content {
+			display: none;
+			padding-bottom: 3rem;
+			padding-left: 9.8rem;
+			padding-right: 5.8rem;
+			box-sizing: border-box;
+			font-size: 1.4rem;
+			letter-spacing: 0.03em;
+			font-weight: 400;
+			line-height: 1.85;
+			font-family: 'Noto Sans JP', sans-serif;
+			@include mq(sm) {
+				padding-left: 2rem;
+				padding-right: 1rem;
+				font-size: 1.3rem;
 			}
 		}
 	}
 }
 
-.p-contact {
-	&-container {
-		padding: 16rem 12rem 14rem;
-		@include mq(sm) {
-			padding: 9rem 0 12rem;
-		}
-	}
-	&__caution {
-		text-align: center;
-		font-size: 1.6rem;
-		line-height: 1.875;
-		letter-spacing: 0.02em;
-		margin-bottom: 6rem;
-		@include mq(sm) {
-			font-size: 1.4rem;
-			line-height: 1.71;
-			letter-spacing: 0.03em;
-			margin-bottom: 4rem;
-		}
-	}
-	&__progress {
-		display: block;
-		width: 31.7rem;
-		height: auto;
-		margin: 0 auto 6rem;
-		@include mq(sm) {
-			width: 21.1rem;
-			margin: 0 auto 3.4rem;
-		}
-	}
-}
