@@ -24,25 +24,25 @@ $(function(){
 /**
  * ローディング関連の処理
  */
-// window.addEventListener('load', function() {
-// 	const animateTitle = document.querySelector('#main-title');
-// 	const animateImg = document.querySelector('#main-img');
-// 	const loader = document.querySelector('#loader');
-// 	const loaderSpiner = document.querySelector('#loader-spiner');
+window.addEventListener('load', function() {
+	const animateTitle = document.querySelector('#main-title');
+	const animateImg = document.querySelector('#main-img');
+	const loader = document.querySelector('#loader');
+	const loaderSpiner = document.querySelector('#loader-spiner');
 
-// 	this.setTimeout(function() {
-// 		loaderSpiner.classList.add('is-loading-stop');
-// 	}, 300);
-// 	this.setTimeout(function() {
-// 		loader.classList.add('is-loaded');
-// 	}, 500);
-// 	this.setTimeout(function() {
-// 		animateTitle.classList.add('is-animate');
-// 	}, 1000);
-// 	this.setTimeout(function() {
-// 		animateImg.classList.add('is-animate');
-// 	}, 1200);
-// });
+	this.setTimeout(function() {
+		loaderSpiner.classList.add('is-loading-stop');
+	}, 300);
+	this.setTimeout(function() {
+		loader.classList.add('is-loaded');
+	}, 500);
+	this.setTimeout(function() {
+		animateTitle.classList.add('is-animate');
+	}, 1000);
+	this.setTimeout(function() {
+		animateImg.classList.add('is-animate');
+	}, 1200);
+});
 
 window.addEventListener('scroll', function() {
 	const windowWidth = document.querySelector('body').clientWidth;
