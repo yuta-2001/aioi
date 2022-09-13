@@ -18,7 +18,7 @@
 		/>
 		<meta 
 			property="og:image"
-			content="assets/images/favicons/ogp.webp"
+			content="http://eishin-develop.sakura.ne.jp/aioi/assets/images/favicons/ogp.jpg"
 		/>
 
 		<!-- favicon -->
@@ -50,109 +50,7 @@
 		<header class="l-header" id="header">
 			<div class="l-header-container">
 				<h1 class="l-header__logo">
-					<a class="l-header__logo__link" href="./index.html">
-						<img src="./assets/images/logo.webp" alt="">
-					</a>
-				</h1>
-				<nav class="l-header-right page-link">
-					<ul class="l-header-right-list">
-						<li class="l-header-right-list__item">
-							<a class="l-header-right-list__item__link" href="#industory">
-								保険業界について
-							</a>
-						</li>
-						<li class="l-header-right-list__item">
-							<a class="l-header-right-list__item__link" href="#consultant">
-								保険コンサルタントとは
-							</a>
-						</li>
-						<li class="l-header-right-list__item">
-							<a class="l-header-right-list__item__link" href="#support">
-								独立支援制度
-							</a>
-						</li>
-						<li class="l-header-right-list__item">
-							<a class="l-header-right-list__item__link" href="#people">
-								働く人
-							</a>
-						</li>
-						<li class="l-header-right-list__item">
-							<a class="l-header-right-list__item__link" href="#question">
-								よくある質問
-							</a>
-						</li>
-					</ul>
-					<a class="c-btn --contact" href="#contact">
-						<img class="mail-icon" src="./assets/images/mailIcon.svg" alt="">
-						<span>お問い合わせ</span>
-					</a>
-				</nav>
-				<button class="l-header-hamburger" id="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-			<nav class="l-header-modal page-link" id="navigation">
-				<div class="l-header-modal-container">
-					<ul class="l-header-modal-list">
-						<li class="l-header-modal-list-item">
-							<a href="#industory" class="l-header-modal-list-item__link">
-								保険業界について
-							</a>
-						</li>
-						<li class="l-header-modal-list-item">
-							<a href="#consultant" class="l-header-modal-list-item__link">
-								保険コンサルタントとは
-							</a>
-						</li>
-						<li class="l-header-modal-list-item">
-							<a href="#support" class="l-header-modal-list-item__link">
-								独立支援制度
-							</a>
-						</li>
-						<li class="l-header-modal-list-item">
-							<a href="#people" class="l-header-modal-list-item__link">
-								働く人
-							</a>
-						</li>
-						<li class="l-header-modal-list-item">
-							<a href="#question" class="l-header-modal-list-item__link">
-								よくある質問
-							</a>
-						</li>
-					</ul>
-					<a class="c-btn --contact" href="#contact">
-						<img class="mail-icon" src="./assets/images/mailIcon.svg" alt="">
-						<span>お問い合わせ</span>
-					</a>
-					<ul class="l-header-modal-ex">
-						<li class="l-header-modal-ex-item">
-							<a class="l-header-modal-ex-item__link" href="https://www.aioinissaydowa.co.jp/" target="_blank" rel="noopener noreferrer">
-								<img class="l-header-modal-ex-item__link__icon" src="./assets/images/exLink.webp" alt="">
-								<span class="l-header-modal-ex-item__link__txt">
-									あいおいニッセイ同和損保
-								</span>
-							</a>
-						</li>
-						<li class="l-header-modal-ex-item">
-							<a class="l-header-modal-ex-item__link" href="https://www.aioinissaydowa.co.jp/corporate/policy/privacy.html" target="_blank" rel="noopener noreferrer">
-								<img class="l-header-modal-ex-item__link__icon" src="./assets/images/exLink.webp" alt="">
-								<span class="l-header-modal-ex-item__link__txt">
-									個人情報保護方針
-								</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</header>
-
-		<!-- 固定header -->
-		<header class="l-header --fixed" id="fixed-header">
-			<div class="l-header-container">
-				<h1 class="l-header__logo">
-					<a class="l-header__logo__link" href="./index.html">
+					<a class="l-header__logo__link" href="./index.php">
 						<img src="./assets/images/logo.webp" alt="">
 					</a>
 				</h1>
@@ -259,14 +157,14 @@
 		</div>
 
 		<!-- main -->
-		<main>
+		<main style="overflow: hidden;">
 			<section class="p-mv" id="mv">
 				<h1 class="p-mv__title js-split" id="main-title">
 					未経験から、<br class="u-for-sm">保険のプロへ。<br>
 					あいおいで保険コンサルタントになろう。
 				</h1>
 				<div class="p-mv-bottom">
-					<div class="p-mv-bottom-left page-link">
+					<div class="p-mv-bottom-left page-link" id="main-appeal">
 						<img class="p-mv-bottom-left__badge" src="./assets/images/mvBadge.webp" alt="">
 						<a class="c-btn --hear" href="#contact">
 							<span class="triangle"></span>
@@ -281,7 +179,7 @@
 			<section class="p-industory" id="industory">
 				<div class="c-bg"></div>
 				<div class="p-industory-container container">
-					<h2 class="c-section-title">
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							Insurance industry
 						</span><br>
@@ -290,7 +188,7 @@
 						</span>
 					</h2>
 					<ul class="p-industory-list">
-						<li class="p-industory-item">
+						<li class="p-industory-item c-fade-in js-animate-content">
 							<span class="c-number">
 								01
 							</span>
@@ -309,7 +207,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="p-industory-item">
+						<li class="p-industory-item c-fade-in js-animate-content">
 							<span class="c-number">
 								02
 							</span>
@@ -328,7 +226,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="p-industory-item">
+						<li class="p-industory-item c-fade-in js-animate-content">
 							<span class="c-number">
 								03
 							</span>
@@ -352,7 +250,7 @@
 			</section>
 			<section class="p-consultant" id="consultant">
 				<div class="p-consultant-container container">
-					<h2 class="c-section-title">
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							Insurance consultant
 						</span><br>
@@ -360,13 +258,14 @@
 							保険コンサルタントとは
 						</span>
 					</h2>
-					<a class="p-consultant-video js-modal-open" data-target="modal01">
+					<a class="p-consultant-video js-modal-open c-fade-in js-animate-content" data-target="modal01">
 						<img class="" src="./assets/images/video.webp" alt="">
 					</a>
 					<!-- モーダル -->
-					<div class="p-consultant-modal js-modal is-close js-modal-close" id="modal01">
-						<button class="c-modal-btn">
+					<div class="p-consultant-modal js-modal is-close" id="modal01">
+						<button class="c-modal-btn js-modal-close js-modal-close">
 						</button>
+						<div class="c-modal-cover js-modal-close"></div>
 						<div class="p-consultant-modal__content">
 							<iframe class="js-youtube" data-youtube="https://player.vimeo.com/video/475738270" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://player.vimeo.com/video/475738270"></iframe>
 						</div>
@@ -380,9 +279,9 @@
 					<img src="./assets/images/supportBg.webp" alt="">
 				</picture>
 				<div class="p-support-container container">
-					<div class="p-support__lines --long js-line"></div>
-					<div class="p-support__lines --short js-line"></div>
-					<h2 class="c-section-title">
+					<div class="p-support__lines --long js-animate-content js-action-every"></div>
+					<div class="p-support__lines --short js-animate-content js-action-every"></div>
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							Support system
 						</span><br>
@@ -391,20 +290,20 @@
 						</span>
 					</h2>
 					<div class="p-support-middle">
-						<div class="p-support-middle__img">
+						<div class="p-support-middle__img c-fade-in js-animate-content">
 							<img src="./assets/images/supportWomen.webp" alt="">
 						</div>
 						<div class="p-support-middle-right">
-							<h3 class="p-support-middle__title">
+							<h3 class="p-support-middle__title c-fade-in js-animate-content">
 								〜 IPA社員制度（独立型）〜
 							</h3>
-							<p class="p-support-middle__txt">
+							<p class="p-support-middle__txt c-fade-in js-animate-content">
 								業界未経験からプロフェッショナルな保険コンサルタントを養成するための最長５年間の研修プログラムをご用意。<br>
 								（研修期間も給与は支給）プログラム修了後は代理店として独立することも可能です。
 							</p>
 						</div>
 					</div>
-					<picture class="p-support-bottom">
+					<picture class="p-support-bottom c-fade-in js-animate-content">
 						<source srcset="./assets/images/sm/supportFlow.webp" media="(max-width: 520px)" />
 						<img src="./assets/images/supportFlow.webp" alt="">
 					</picture>
@@ -413,7 +312,7 @@
 			<section class="p-people" id="people">
 				<div class="c-bg --people"></div>
 				<div class="p-people-container container">
-					<h2 class="c-section-title">
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							People
 						</span><br>
@@ -422,7 +321,7 @@
 						</span>
 					</h2>
 					<ul class="p-people-list">
-						<li class="p-people-item">
+						<li class="p-people-item c-fade-in js-animate-content">
 							<a class="p-people-item__link js-modal-open" data-target="modal02">
 								<span class="c-number">
 									01
@@ -432,6 +331,7 @@
 									<img src="./assets/images/people01.webp" alt="">
 									<span class="p-people-item-top__arrow">
 										<span class="p-people-item-top__arrow__content">
+											<img src="./assets/images/lines.svg" alt="">
 										</span>
 									</span>
 								</picture>
@@ -452,7 +352,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="p-people-item">
+						<li class="p-people-item c-fade-in js-animate-content">
 							<a class="p-people-item__link js-modal-open" data-target="modal03">
 								<span class="c-number">
 									02
@@ -462,6 +362,7 @@
 									<img src="./assets/images/people02.webp" alt="">
 									<span class="p-people-item-top__arrow">
 										<span class="p-people-item-top__arrow__content">
+											<img src="./assets/images/lines.svg" alt="">
 										</span>
 									</span>
 								</picture>
@@ -484,9 +385,10 @@
 						</li>
 					</ul>
 					<ul class="p-people-modal">
-						<li class="p-people-modal-item js-modal js-modal-close is-close" id="modal02">
-							<button class="c-modal-btn --people">
+						<li class="p-people-modal-item js-modal is-close" id="modal02">
+							<button class="c-modal-btn --people js-modal-close">
 							</button>
+							<div class="c-modal-cover js-modal-close"></div>
 							<div class="p-people-modal-item-container">
 								<button class="p-people-modal-item__btn js-modal-close">
 								</button>
@@ -549,9 +451,10 @@
 								</div>
 							</div>
 						</li>
-						<li class="p-people-modal-item js-modal js-modal-close is-close" id="modal03">
-							<button class="c-modal-btn">
+						<li class="p-people-modal-item js-modal is-close" id="modal03">
+							<button class="c-modal-btn --people js-modal-close">
 							</button>
+							<div class="c-modal-cover js-modal-close"></div>
 							<div class="p-people-modal-item-container">
 								<button class="p-people-modal-item__btn js-modal-close">
 								</button>
@@ -618,13 +521,13 @@
 			</section>
 			<section class="p-pitch" id="pitch">
 				<div class="p-pitch-container container">
-					<h2 class="p-pitch__title">
+					<h2 class="p-pitch__title c-fade-in js-animate-content">
 						Get to Know us.
 					</h2>
-					<p class="p-pitch__txt">
+					<p class="p-pitch__txt c-fade-in js-animate-content">
 						下記のスライドにて、当社についてより詳しく確認していただけます。
 					</p>
-					<div class="p-pitch__content">
+					<div class="p-pitch__content c-fade-in js-animate-content">
 						<img src="./assets/images/pitch.webp" alt="">
 					</div>
 				</div>
@@ -635,7 +538,7 @@
 					<img src="./assets/images/questionBg.webp" alt="">
 				</picture>
 				<div class="p-question-container container">
-					<h2 class="c-section-title">
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							Q＆A
 						</span><br>
@@ -643,7 +546,7 @@
 							よくある質問
 						</span>
 					</h2>
-					<dl class="p-question-item js-accordion">
+					<dl class="p-question-item js-accordion c-fade-in js-animate-content">
 						<dt class="p-question-item__head js-accordion-head">
 							<img class="p-question-item__head__icon" class="" src="./assets/images/questionIcon.webp" alt="">
 							<span class="p-question-item__head__txt">
@@ -657,7 +560,7 @@
 							</p>
 						</dd>
 					</dl>
-					<dl class="p-question-item js-accordion">
+					<dl class="p-question-item js-accordion c-fade-in js-animate-content">
 						<dt class="p-question-item__head js-accordion-head">
 							<img class="p-question-item__head__icon" class="" src="./assets/images/questionIcon.webp" alt="">
 							<span class="p-question-item__head__txt">
@@ -671,7 +574,7 @@
 							</p>
 						</dd>
 					</dl>
-					<dl class="p-question-item js-accordion">
+					<dl class="p-question-item js-accordion c-fade-in js-animate-content">
 						<dt class="p-question-item__head js-accordion-head">
 							<img class="p-question-item__head__icon" class="" src="./assets/images/questionIcon.webp" alt="">
 							<span class="p-question-item__head__txt">
@@ -689,7 +592,7 @@
 			</section>
 			<section class="l-contact" id="contact">
 				<div class="l-contact-container container">
-					<h2 class="c-section-title">
+					<h2 class="c-section-title c-fade-in js-animate-content">
 						<span class="en">
 							Contact
 						</span><br>
@@ -697,67 +600,68 @@
 							お問い合わせ
 						</span>
 					</h2>
-					<p class="l-contact__caution">
+					<p class="l-contact__caution c-fade-in js-animate-content">
 						お気軽にお問い合わせくださいませ。<br class="u-for-sm">下記の項目は、全て入力必須です。
 					</p>
-					<picture class="c-progress">
+					<picture class="c-progress c-fade-in js-animate-content">
 						<source srcset="./assets/images/sm/progress.webp" media="(max-width: 520px)" />
 						<img src="./assets/images/progress.webp" alt="">
 					</picture>
 					<div class="l-contact-form">
-						<form>
+						<form action="./confirm.php" method="post">
 							<ul class="l-contact-form-list">
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										お名前
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="name" class="l-contact-form-item__body__input" type="text" placeholder="山田 太郎">
+										<input name="name" class="l-contact-form-item__body__input" type="text" placeholder="山田 太郎" required>
 									</div>
 								</li>
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										フリガナ
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="kana" class="l-contact-form-item__body__input" type="text" placeholder="ヤマダ タロウ">
+										<input name="kana" class="l-contact-form-item__body__input" type="text" placeholder="ヤマダ タロウ" required>
 									</div>
 								</li>
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										電話番号
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="tel" class="l-contact-form-item__body__input" type="tel" placeholder="012-3456-7891">
+										<input name="tel" class="l-contact-form-item__body__input" type="tel" placeholder="012-3456-7891" required>
 									</div>
 								</li>
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										メールアドレス
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="email" class="l-contact-form-item__body__input" type="email">
+										<input name="email" class="l-contact-form-item__body__input" type="email" required>
 									</div>
 								</li>
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										メールアドレス(確認用)
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="email_confirm" class="l-contact-form-item__body__input" type="email">
+										<input name="email_confirm" class="l-contact-form-item__body__input" type="email" required>
 									</div>
 								</li>
-								<li class="l-contact-form-item">
+								<li class="l-contact-form-item c-fade-in js-animate-content">
 									<p class="l-contact-form-item__head">
 										年齢
 									</p>
 									<div class="l-contact-form-item__body">
-										<input name="age" class="l-contact-form-item__body__input --age" type="text" placeholder="20">
+										<input name="age" class="l-contact-form-item__body__input --age" type="text" placeholder="20" required>
+										<span class="l-contact-form-item__body__unit">歳</span>
 									</div>
 								</li>
 							</ul>
-							<label class="l-contact-form-agree">
-								<input class="l-contact-form-agree__checkbox" type="checkbox">
+							<label class="l-contact-form-agree c-fade-in js-animate-content">
+								<input class="l-contact-form-agree__checkbox" type="checkbox" required>
 								<span class="l-contact-form-agree__txt">
 									<a class="l-contact-form-agree__txt__link" href="https://www.aioinissaydowa.co.jp/corporate/policy/privacy.html" target="_blank" rel="noopener noreferrer">
 										個人情報保護方針
@@ -765,7 +669,7 @@
 									に同意する
 								</span>
 							</label>
-							<button class="l-contact-form__btn" type="submit">
+							<button class="l-contact-form__btn c-fade-in js-animate-content" type="submit">
 								<span>
 									確認する
 								</span>
@@ -781,7 +685,7 @@
 			<div class="l-footer-container container">
 				<div class="l-footer-top">
 					<h1 class="l-footer__logo">
-						<a class="l-footer__logo__link" href="./index.html">
+						<a class="l-footer__logo__link" href="./index.php">
 							<img src="./assets/images/logo.webp" alt="">
 						</a>
 					</h1>
@@ -844,11 +748,11 @@
 				</ul>
 			</div>
 			<div class="l-footer-copyright">
-				<p class="container">
-					<small>
+				<div class="l-footer-copyright-container">
+					<small class="l-footer-copyright__txt">
 						&copy; Aioi Nissay Dowa Insurance Co., Ltd. All rights reserved.
 					</small>
-				</p>
+				</div>
 			</div>
 		</footer>
 	</body>

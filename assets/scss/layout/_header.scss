@@ -2,23 +2,6 @@
 	border-bottom: 1px solid $cGray;
 	background-color: $cWhite;
 	z-index: 100;
-	&.--other-page {
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-	}
-	&.--fixed {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		transform: translateY(-120%);
-		transition: all 0.3s ease;
-		&.is-in {
-			transform: none;
-		}
-	}
 	@include mq(md) {
 		position: fixed;
 		top: 0;
@@ -35,12 +18,16 @@
 		align-items: center;
 		justify-content: space-between;
 		@include mq(md) {
-			width: 95%;
+			width: 100%;
 			max-width: 180rem;
+			box-sizing: border-box;
+			padding: 0 8rem;
 			height: 13rem;
 		}
 		@include mq(sm) {
 			height: 6rem;
+			width: 100%;
+			padding: 0 2rem;
 		}
 	}
 	&__logo {

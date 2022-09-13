@@ -36,7 +36,8 @@ em {
 		min-width: 100rem;
 	}
 	@include mq(sm) {
-		width: 33.5rem;
-		min-width: 33.5rem;
+		max-width: 33.5rem;
+		min-width: 30rem;
+		width: calc(335/375 * 100%);
 	}
 }

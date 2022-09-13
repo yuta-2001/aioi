@@ -1,0 +1,10 @@
+.c-modal-cover {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(37,37,37,0.86);	
+	cursor: pointer;
+}

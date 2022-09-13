@@ -7,8 +7,10 @@
 	border-radius: 50%;
 	border: 1px solid $cWhite;
 	@include mq(sm) {
-		top: 3rem;
-		right: 3rem;
+		top: 2rem;
+		right: 2rem;
+		width: 4.4rem;
+		height: 4.4rem;
 	}
 	&.--people {
 		@include mq(sm) {
@@ -27,6 +29,9 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%) rotate(45deg);
+		@include mq(sm) {
+			width: 2rem
+		}
 	}
 	&::after {
 		position: absolute;
@@ -37,5 +42,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-50%) rotate(-45deg);
+		@include mq(sm) {
+			width: 2rem;
+		}
 	}
 }

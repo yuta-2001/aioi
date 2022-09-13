@@ -1,3 +1,6 @@
+/**
+ * 下に固定しているボタンのフェードイン、フェードアウトに関する処理
+ */
 export const bottomBtnFadeInOut = function() {
 	const bottomBtn = document.querySelector('#bottom-fixed-btn');
 	const mvHeight = document.querySelector('#mv').clientHeight;

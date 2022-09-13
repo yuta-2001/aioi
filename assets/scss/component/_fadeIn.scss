@@ -1,0 +1,9 @@
+.c-fade-in {
+	transform: translateY(10rem);
+	opacity: 0;
+	transition: opacity 0.8s cubic-bezier(.4, .59, .41, .97) 0s, transform 0.8s cubic-bezier(.4, .59, .41, .97) 0s;
+	&.is-animate {
+		transform: none;
+		opacity: 1;
+	}
+}

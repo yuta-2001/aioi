@@ -12,7 +12,7 @@ export class ScrollObserver {
 		const defaultOptions = {
 			root: null,
 			threshold: 0,
-			rootMargin: '-30% 0px',
+			rootMargin: '-20% 0px',
 		}
 		this.options = Object.assign(defaultOptions, options);
 		this._init();
@@ -32,7 +32,14 @@ export class ScrollObserver {
 				 */
 				if(entry.isIntersecting) {
 					this.cb(entry.target, true);
-					observer.unobserve(entry.target);
+					
+					/**
+					 * 交差時毎回アクションさせるものにはjs-action-everyを追加
+					 */
+					if(entry.target.classList.contains('js-action-every')) {
+					} else {
+						observer.unobserve(entry.target);
+					}
 				} else {
 					this.cb(entry.target, false);
 				}

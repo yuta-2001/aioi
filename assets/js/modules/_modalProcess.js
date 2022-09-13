@@ -1,12 +1,14 @@
 import { backfaceFixed } from "./_backFaceFixed.js";
 
+/**
+ * モーダル開閉処理に関するクラス
+ */
 export class modalProcess {
 	constructor() {
 		this.openBtns = document.querySelectorAll('.js-modal-open');
 		this.closeBtns = document.querySelectorAll('.js-modal-close');
 		this.modals = document.querySelectorAll('.js-modal');
 		this.excecute();
-		this.a = 'aaa';
 	}
 
 	/**
@@ -55,5 +57,4 @@ export class modalProcess {
 			}.bind(this));
 		}.bind(this));
 	}
-
 }

@@ -1,7 +1,7 @@
 import { backfaceFixed } from "./_backFaceFixed.js";
 
 /**
- * ハンバーガーメニューの開閉処理
+ * ハンバーガーメニューの開閉処理に関するクラス
  */
 export class HamburgerMenuProcess {
 	constructor () {
